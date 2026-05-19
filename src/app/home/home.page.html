@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="bg-background min-h-[100vh] text-foreground font-body w-full relative flex flex-col">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <!-- Default background for smaller screens -->
+      <img src="https://storage.googleapis.com/banani-generated-images/generated-images/0a0dea5e-3833-482d-ae31-1dfe92f98555.jpg" 
+           class="w-full h-full object-cover lg:hidden" alt="Background">
+      <!-- HD/Superior screen background showing bosque.png in its normal, high-fidelity state -->
+      <img src="/assets/images/bosque.png" 
+           class="w-full h-full object-cover hidden lg:block" alt="Background HD">
+      
+      <!-- Gradient overlay: Deep dark for smaller screen readability, and soft natural vignette on HD screens to preserve natural forest state -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#2d3b2f]/80 lg:bg-gradient-to-b lg:from-black/40 lg:via-black/10 lg:to-black/30"></div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+
+    <main class="relative z-10 flex-1 flex items-center justify-center px-6 py-12 min-h-[calc(100vh-80px)] overflow-hidden">
+      <!-- Decorative Elements -->
+      <div class="absolute top-10 right-10 md:right-32 text-white/10 transform rotate-12">
+        <iconify-icon icon="lucide:leaf" style="font-size: 160px;"></iconify-icon>
+      </div>
+      <div class="absolute bottom-20 left-10 md:left-24 text-white/10 transform -rotate-45">
+        <iconify-icon icon="lucide:leaf" style="font-size: 100px;"></iconify-icon>
+      </div>
+      <div class="absolute bottom-10 right-20 text-white/10">
+        <iconify-icon icon="lucide:mountain" style="font-size: 140px;"></iconify-icon>
+      </div>
+
+      <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-8 bg-white/10 backdrop-blur-md border border-white/20 text-white">
+          <iconify-icon icon="lucide:sparkles" class="text-muted" style="font-size: 18px;"></iconify-icon>
+          <span class="font-medium tracking-wide">Biodiversidad y Tecnología</span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-headings font-bold text-white mb-8 leading-tight drop-shadow-xl">
+          Protegiendo las aves del Tolima mediante inteligencia artificial
+        </h1>
+
+        <p class="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl drop-shadow-md leading-relaxed">
+          BirdScope es una plataforma tecnológica enfocada en la identificación y conservación de especies de aves del Tolima, promoviendo el conocimiento y la protección de la biodiversidad.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
+          <button routerLink="/especies" class="w-full sm:w-auto px-8 py-4 font-headings font-bold text-lg rounded-full bg-primary text-primary-foreground border-2 border-primary shadow-lg cursor-pointer">
+            Explorar especies
+          </button>
+          <button routerLink="/reconocimiento" class="w-full sm:w-auto px-8 py-4 font-headings font-bold text-lg rounded-full bg-white text-primary border-2 border-white shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+            <iconify-icon icon="lucide:scan" style="font-size: 24px;"></iconify-icon>
+            Probar reconocimiento IA
+          </button>
+        </div>
+      </div>
+    </main>
   </div>
 </ion-content>

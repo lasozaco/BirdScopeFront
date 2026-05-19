@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-background min-h-[100vh] text-foreground font-body w-full relative flex flex-col">
+
+    <main class="flex-1 max-w-4xl mx-auto px-6 py-12 w-full flex flex-col justify-center items-center">
+      <!-- Title Section -->
+      <div class="mb-10 text-center">
+        <h1 class="text-4xl font-headings font-bold text-primary mb-3">Reconocimiento de Aves IA</h1>
+        <p class="text-lg text-foreground/70 max-w-xl mx-auto">Sube una fotografía o audio de un ave y nuestro modelo de Inteligencia Artificial la identificará en segundos.</p>
+      </div>
+
+      <!-- Dropzone / Scanner Card -->
+      <div class="w-full max-w-xl bg-white p-8 rounded-3xl shadow-xl border border-border/40 relative overflow-hidden group flex flex-col items-center">
+        <!-- Laser Scanner Effect -->
+        <div class="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 scan-laser pointer-events-none"></div>
+
+        <div class="w-full aspect-[4/3] rounded-2xl bg-background border-2 border-dashed border-border/80 flex flex-col items-center justify-center p-6 text-center cursor-pointer hover:border-secondary hover:bg-secondary/5 transition-all duration-300 mb-8 relative">
+          <iconify-icon icon="lucide:image-plus" class="text-primary size-[64px] mb-4 group-hover:scale-110 transition-transform duration-300" style="font-size: 64px;"></iconify-icon>
+          <p class="text-lg font-bold text-foreground mb-1">Arrastra una imagen aquí</p>
+          <p class="text-xs text-muted-foreground">Soporta formatos JPG, PNG (máx. 10MB)</p>
+          <button class="mt-4 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 text-primary font-headings font-bold rounded-full text-sm transition-colors cursor-pointer">Seleccionar Archivo</button>
+        </div>
+
+        <div class="flex items-center gap-4 w-full">
+          <app-button variant="primary" customClass="flex-1 py-4">
+            <iconify-icon icon="lucide:scan" class="size-[20px]" style="font-size: 20px;"></iconify-icon>
+            Iniciar Reconocimiento
+          </app-button>
+          <button class="w-14 h-14 rounded-full border-2 border-border text-foreground/70 hover:border-secondary hover:text-secondary flex items-center justify-center transition-colors cursor-pointer" title="Grabar Canto de Ave">
+            <iconify-icon icon="lucide:mic" class="size-[24px]" style="font-size: 24px;"></iconify-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Features Details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-xl mt-12 text-sm text-foreground/70">
+        <div class="flex gap-3">
+          <iconify-icon icon="lucide:sparkles" class="text-secondary size-[20px] shrink-0" style="font-size: 20px;"></iconify-icon>
+          <p><strong>Precisión del 94%:</strong> Modelo entrenado con más de 20,000 registros fotográficos de avifauna andina.</p>
+        </div>
+        <div class="flex gap-3">
+          <iconify-icon icon="lucide:database" class="text-secondary size-[20px] shrink-0" style="font-size: 20px;"></iconify-icon>
+          <p><strong>Biblioteca en línea:</strong> Una vez identificada, la especie se enlazará automáticamente con su ficha en el explorador.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</ion-content>

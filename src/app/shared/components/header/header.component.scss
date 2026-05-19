@@ -1,0 +1,53 @@
+.app-header {
+  @apply w-full py-5 px-6 md:px-12 flex items-center justify-between transition-all duration-300 relative overflow-hidden;
+
+  &.is-transparent {
+    @apply bg-transparent absolute top-0 z-20;
+  }
+
+  &.is-solid {
+    @apply border-b border-white/10 shadow-xl relative z-20 bg-cover bg-center bg-no-repeat mb-[5px];
+  }
+
+  .forest-overlay {
+    @apply absolute inset-0 bg-[#1c261e]/85 backdrop-blur-[2px] -z-10 pointer-events-none;
+  }
+
+  .logo-wrapper {
+    @apply flex items-center gap-2.5 cursor-pointer relative z-10;
+
+    .logo-img {
+      @apply w-10 h-10 object-contain transition-transform duration-300;
+    }
+
+    .logo-text {
+      @apply font-headings font-bold text-2xl tracking-wide text-white drop-shadow-md;
+    }
+
+    &:hover {
+      .logo-img {
+        @apply scale-105;
+      }
+    }
+  }
+
+  .nav-menu {
+    @apply hidden md:flex gap-8 items-center relative z-10;
+
+    .nav-link {
+      @apply font-medium cursor-pointer transition-all duration-200 pb-1.5 border-b-2 border-transparent text-white/80 hover:text-white hover:border-white/40 drop-shadow-sm;
+
+      &.active {
+        @apply text-white border-white font-bold;
+      }
+    }
+  }
+
+  .mobile-menu-btn {
+    @apply md:hidden p-2 hover:bg-white/10 rounded-full transition-colors cursor-pointer relative z-10;
+    
+    iconify-icon {
+      @apply text-white;
+    }
+  }
+}

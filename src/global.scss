@@ -9,6 +9,37 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #F7F7F7;
+  --color-foreground: #2d3b2f;
+  --color-border: #EAD7BB;
+  --color-input: #ffffff;
+  --color-primary: #4F6F52;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #7A9D54;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #EAD7BB;
+  --color-muted-foreground: #8B5E3C;
+  --color-earth: #8B5E3C;
+  --color-earth-foreground: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 48px;
+  --radius-full: 9999px;
+
+  --radius: var(--radius-md);
+
+  --font-body: 'Nunito', sans-serif;
+  --font-headings: 'Nunito', sans-serif;
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 

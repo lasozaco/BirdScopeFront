@@ -1,0 +1,59 @@
+<header class="app-header"
+        [ngClass]="transparent ? 'is-transparent' : 'is-solid'"
+        [style.background-image]="transparent ? 'none' : 'url(/assets/images/bosque.png)'">
+  
+  <!-- Premium Dark-Green Forest Overlay when solid -->
+  <div *ngIf="!transparent" class="forest-overlay"></div>
+
+  <!-- Logo -->
+  <div class="logo-wrapper" routerLink="/home">
+    <img src="/assets/images/logo.png" alt="BirdScope Logo" class="logo-img">
+    <span class="logo-text">
+      BirdScope
+    </span>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu">
+    
+    <!-- Inicio -->
+    <a routerLink="/home" [routerLinkActiveOptions]="{exact: true}"
+       routerLinkActive="active"
+       class="nav-link">
+      Inicio
+    </a>
+       
+    <!-- Especies -->
+    <a routerLink="/especies"
+       routerLinkActive="active"
+       class="nav-link">
+      Especies
+    </a>
+       
+    <!-- Conservación -->
+    <a routerLink="/conservacion"
+       routerLinkActive="active"
+       class="nav-link">
+      Conservación
+    </a>
+       
+    <!-- Reconocimiento IA -->
+    <a routerLink="/reconocimiento"
+       routerLinkActive="active"
+       class="nav-link">
+      Reconocimiento IA
+    </a>
+       
+    <!-- Acerca de -->
+    <a routerLink="/acerca"
+       routerLinkActive="active"
+       class="nav-link">
+      Acerca de
+    </a>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-btn">
+    <iconify-icon icon="lucide:menu" style="font-size: 26px;"></iconify-icon>
+  </button>
+</header>

@@ -1,3 +1,8 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <app-header *ngIf="showHeader" [transparent]="transparentHeader"></app-header>
+  
+  <!-- Dynamic content wrapper to prevent Ionic content overlay behind solid header -->
+  <div [ngClass]="showHeader && !transparentHeader ? 'relative min-h-[100vh]' : 'relative w-full min-h-full'" class="flex flex-col flex-1">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
 </ion-app>

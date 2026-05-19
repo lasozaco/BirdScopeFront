@@ -1,0 +1,80 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-background min-h-[100vh] text-foreground font-body w-full relative flex flex-col">
+
+    <main class="flex-1 max-w-6xl mx-auto px-6 py-12 w-full mt-4">
+      <!-- Title Section -->
+      <div class="mb-10 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-headings font-bold text-primary mb-3">Explorar Especies</h1>
+        <p class="text-lg text-foreground/70 max-w-2xl">Descubre la increíble biodiversidad de aves registradas en el departamento del Tolima. Filtra por categoría o busca tu especie preferida.</p>
+      </div>
+
+      <!-- Search & Filter bar -->
+      <div class="bg-white p-4 rounded-2xl shadow-sm border border-border/50 flex flex-col md:flex-row gap-4 mb-8">
+        <div class="flex-1 relative">
+          <input type="text" placeholder="Buscar especie por nombre..." class="w-full pl-10 pr-4 py-3 rounded-full border border-border focus:outline-none focus:border-primary bg-background/50">
+          <iconify-icon icon="lucide:search" class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground size-[18px]" style="font-size: 18px;"></iconify-icon>
+        </div>
+        <div class="flex gap-2 overflow-x-auto pb-1 md:pb-0">
+          <button class="px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-medium text-sm transition-all whitespace-nowrap cursor-pointer">Todas</button>
+          <button class="px-5 py-2.5 rounded-full bg-background hover:bg-muted/10 text-foreground/80 font-medium text-sm transition-all whitespace-nowrap cursor-pointer">Endémicas</button>
+          <button class="px-5 py-2.5 rounded-full bg-background hover:bg-muted/10 text-foreground/80 font-medium text-sm transition-all whitespace-nowrap cursor-pointer">Amenazadas</button>
+          <button class="px-5 py-2.5 rounded-full bg-background hover:bg-muted/10 text-foreground/80 font-medium text-sm transition-all whitespace-nowrap cursor-pointer">Migratorias</button>
+        </div>
+      </div>
+
+      <!-- Species Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Bird Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-border/30 transition-all hover:-translate-y-1 group flex flex-col">
+          <div class="h-56 overflow-hidden relative">
+            <img src="/assets/images/condor.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Cóndor de los Andes">
+            <span class="absolute top-4 right-4 bg-[#8b5e3c] text-white text-xs font-bold px-3 py-1.5 rounded-full">Amenazada</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-headings font-bold text-foreground mb-1">Cóndor de los Andes</h3>
+            <p class="text-xs italic text-muted-foreground mb-4">Vultur gryphus</p>
+            <p class="text-sm text-foreground/80 mb-6 line-clamp-3">El ave voladora más grande del mundo. Habita en los páramos del Tolima y se encuentra en peligro crítico de extinción. Su conservación es vital para el ecosistema andino.</p>
+            <app-button variant="outline" customClass="w-full text-sm mt-auto">
+              Ver detalles
+              <iconify-icon icon="lucide:arrow-right" class="size-[16px]" style="font-size: 16px;"></iconify-icon>
+            </app-button>
+          </div>
+        </div>
+
+        <!-- Bird Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-border/30 transition-all hover:-translate-y-1 group flex flex-col">
+          <div class="h-56 overflow-hidden relative">
+            <img src="/assets/images/colibri.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Colibrí Cabeciazul">
+            <span class="absolute top-4 right-4 bg-[#7a9d54] text-white text-xs font-bold px-3 py-1.5 rounded-full">Endémica</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-headings font-bold text-foreground mb-1">Colibrí Cabeciazul</h3>
+            <p class="text-xs italic text-muted-foreground mb-4">Klais guimeti</p>
+            <p class="text-sm text-foreground/80 mb-6 line-clamp-3">Una pequeña joya alada con un plumaje azul brillante en su cabeza. Es un polinizador clave en los bosques andinos y nublados de la región del Tolima.</p>
+            <app-button variant="outline" customClass="w-full text-sm mt-auto">
+              Ver detalles
+              <iconify-icon icon="lucide:arrow-right" class="size-[16px]" style="font-size: 16px;"></iconify-icon>
+            </app-button>
+          </div>
+        </div>
+
+        <!-- Bird Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-border/30 transition-all hover:-translate-y-1 group flex flex-col">
+          <div class="h-56 overflow-hidden relative">
+            <img src="/assets/images/loro.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Loro Orejiamarillo">
+            <span class="absolute top-4 right-4 bg-[#8b5e3c] text-white text-xs font-bold px-3 py-1.5 rounded-full">Amenazada</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-headings font-bold text-foreground mb-1">Loro Orejiamarillo</h3>
+            <p class="text-xs italic text-muted-foreground mb-4">Ognorhynchus icterotis</p>
+            <p class="text-sm text-foreground/80 mb-6 line-clamp-3">Estrechamente ligado a la palma de cera del Tolima, esta hermosa especie se encuentra en peligro debido a la pérdida de su hábitat. Iniciativas locales luchan por su conservación.</p>
+            <app-button variant="outline" customClass="w-full text-sm mt-auto">
+              Ver detalles
+              <iconify-icon icon="lucide:arrow-right" class="size-[16px]" style="font-size: 16px;"></iconify-icon>
+            </app-button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</ion-content>
