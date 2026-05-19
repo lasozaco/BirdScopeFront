@@ -1,0 +1,7 @@
+{
+  "name": "BirdScope",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
